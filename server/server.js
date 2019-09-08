@@ -8,7 +8,7 @@ app.use(express.static(publicPath));
 app.get('*', (req, res) => {
   // res.redirect('/');
   res.sendFile(path.join(publicPath, 'index.html'));
-})
+});
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
