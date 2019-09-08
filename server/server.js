@@ -10,6 +10,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
 })
 
-app.listen(3000, () => {
-  console.log("listening on 3000");
+const PORT = process.env.PORT || 5000
+app.listen(PORT, () => {
+  console.log(`listening on ${PORT}`);
 });
