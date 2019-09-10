@@ -102,7 +102,7 @@ exports[`should render ExpenseForm correctly 1`] = `
 </div>
 `;
 
-exports[`should render ExpenseForm with expense data 1`] = `
+exports[`should render ExpenseForm correctly with expense data 1`] = `
 <div>
   <form
     onSubmit={[Function]}
@@ -112,19 +112,19 @@ exports[`should render ExpenseForm with expense data 1`] = `
       onChange={[Function]}
       placeholder="Description"
       type="text"
-      value="Rent"
+      value="Gas"
     />
     <input
       onChange={[Function]}
       placeholder="Amount"
       type="text"
-      value="1095"
+      value="2051.2"
     />
     <SingleDatePicker
       anchorDirection="left"
       customCloseIcon={null}
       customInputIcon={null}
-      date={"1970-01-01T00:00:00.000Z"}
+      date={"1969-12-28T00:00:00.000Z"}
       daySize={39}
       disabled={false}
       displayFormat={[Function]}
