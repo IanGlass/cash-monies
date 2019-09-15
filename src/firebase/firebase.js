@@ -10,36 +10,35 @@ const firebaseConfig = {
   appId: process.env.FIREBASE_APP_ID
 };
 
-export default firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+export { firebase, database as default };
 
-firebase.database().ref().set({
-  name: 'Ian Glass',
-  age: 26,
-  isSingle: false
-})
-.then(() => {
-  console.log('Data is saved')
-})
-.catch((error) => {
-  console.log(error);
-})
+// firebase.database().ref('expenses').push({
+//   id: '1',
+//   description: 'Rent',
+//   amount: 109500,
+//   createdAt: 0
+// });
+
+// firebase.database().ref('expenses').push({
+//   id: '2',
+//   description: 'Petrol',
+//   amount: 30955,
+//   createdAt: 0
+// });
+
 
 // firebase.database()
-//   .ref('attributes')
-//   .set({
-//     height: 180,
-//     weight: 85
+//   .ref('expenses')
+//   .on('child_removed', (snapshot) => {
+//     store.dispatch(removeExpense())
+//     // const expenses = [];
+//     // snapshot.forEach((child) => {
+//     //   expenses.push({
+//     //     ...child.exportVal(),
+//     //     id: child.key
+//     //   });
+//     // })
+//     console.log(snapshot.exportVal());
 //   })
-//   .then(() => {
-//     console.log('Success!');
-//   })
-//   .catch((error) => {
-//     console.log(`An error occurred ${error}`);
-//   })
-
-firebase.database()
-  .ref('isSingle')
-  .remove()
-  .then(() => {
-    console.log('Removed!')
-  })
