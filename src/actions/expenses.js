@@ -39,21 +39,25 @@ export const editExpense = (id, updates) => ({
   updates
 });
 
+// SET_EXPENSES
 export const setExpenses = (expenses) => ({
   type: 'SET_EXPENSES',
   expenses
 });
 
-export const startSetExpenses = (expenses) => {
+export const startSetExpenses = () => {
   return (dispatch) => {
-    const expenseData = {}
-    // Firebase does not deal well with arrays, so create an object using ids as keys
-    expenses.forEach(({ id, description, note, amount, createdAt }) => {
-      expenseData[id] = { description, note, amount, createdAt }
-    })
-    return database.ref('expenses').set(expenseData)
-      .then(() => {
-        dispatch(setExpenses(expenses));
+    return database.ref('expenses').once('value').then((snapshot) => {
+      const expenses = [];
+
+      snapshot.forEach((childSnapshot) => {
+        expenses.push({
+          id: childSnapshot.key,
+          ...childSnapshot.val()
+        });
       });
-  }
+
+      dispatch(setExpenses(expenses));
+    });
+  };
 };
