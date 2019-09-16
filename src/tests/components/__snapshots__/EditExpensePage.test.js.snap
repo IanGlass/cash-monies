@@ -9,6 +9,7 @@ exports[`should handle editExpense 1`] = `
         "createdAt": 0,
         "description": "Rent",
         "id": "1",
+        "note": "",
       }
     }
     onSubmit={[Function]}
@@ -30,6 +31,7 @@ exports[`should handle removeExpense 1`] = `
         "createdAt": 0,
         "description": "Rent",
         "id": "1",
+        "note": "",
       }
     }
     onSubmit={[Function]}
@@ -51,6 +53,7 @@ exports[`should render EditExpensePage correctly 1`] = `
         "createdAt": 0,
         "description": "Rent",
         "id": "1",
+        "note": "",
       }
     }
     onSubmit={[Function]}
