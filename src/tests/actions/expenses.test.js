@@ -3,7 +3,6 @@ import expenses from '../fixtures/expenses';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import database from '../../firebase/firebase';
-import { SSL_OP_NETSCAPE_CA_DN_BUG } from 'constants';
 
 
 const createMockStore = configureMockStore([thunk]);
