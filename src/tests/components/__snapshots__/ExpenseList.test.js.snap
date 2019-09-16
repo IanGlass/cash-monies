@@ -5,6 +5,9 @@ exports[`should render ExpenseList with empty message 1`] = `
   <h1>
     Expense List
   </h1>
+  <p>
+    No expenses
+  </p>
 </div>
 `;
 
@@ -31,7 +34,7 @@ exports[`should render ExpenseList with expenses 1`] = `
     amount={520}
     createdAt={345600000}
     description="Petrol"
-    id={3}
+    id="3"
     note=""
   />
 </div>

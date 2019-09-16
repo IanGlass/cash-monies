@@ -16,7 +16,7 @@ const expenses = [
     note: ''
   },
   {
-    id: 3,
+    id: '3',
     description: 'Petrol',
     amount: 520,
     createdAt: moment(0).add(4, 'days').valueOf(0),

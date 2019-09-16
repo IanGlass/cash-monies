@@ -85,20 +85,16 @@ test('should setup set expense action object with data', () => {
   });
 });
 
-test('should set expenses', () => {
+test('should fetch the expenses from firebase', () => {
   const store = createMockStore({});
-  store.dispatch(startSetExpenses(expenses))
+  store.dispatch(startSetExpenses())
     .then(() => {
-      const action = store.getActions();
-      expect(action).toEqual({
-        type: 'SET_EXPENSES',
-        expenses: [expense[0]]
-      });
 
-      return database.ref('expenses').once('value');
-    })
-    .then((snapshot) => {
-      expect(snapshot.val()).toEqual(expense[0]);
-      done()
-    })
+      const actions = store.getActions();
+      expect(actions[0]).toEqual({
+        type: 'SET_EXPENSES',
+        expenses
+      });
+      done();
+    });
 })
