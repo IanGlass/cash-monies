@@ -16,4 +16,10 @@ const jsx = (
   </Provider>
 );
 
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+
+// Wait until expenses are loaded from DB before rendering application
+store.dispatch(startSetExpenses())
+  .then(() => {
+    ReactDOM.render(jsx, document.getElementById('app'));
+  })

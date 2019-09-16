@@ -1,4 +1,3 @@
-import uuid from 'uuid';
 import database from '../firebase/firebase';
 
 // ADD_EXPENSE
@@ -17,6 +16,7 @@ export const startAddExpense = (expenseData = {}) => {
     } = expenseData;
     const expense = { description, note, amount, createdAt };
 
+    // Return allows promise chaining when using startAddExpense, only add to redux if write to DB succeeded
     return database.ref('expenses').push(expense).then((ref) => {
       dispatch(addExpense({
         id: ref.key,
@@ -38,3 +38,22 @@ export const editExpense = (id, updates) => ({
   id,
   updates
 });
+
+export const setExpenses = (expenses) => ({
+  type: 'SET_EXPENSES',
+  expenses
+});
+
+export const startSetExpenses = (expenses) => {
+  return (dispatch) => {
+    const expenseData = {}
+    // Firebase does not deal well with arrays, so create an object using ids as keys
+    expenses.forEach(({ id, description, note, amount, createdAt }) => {
+      expenseData[id] = { description, note, amount, createdAt }
+    })
+    return database.ref('expenses').set(expenseData)
+      .then(() => {
+        dispatch(setExpenses(expenses));
+      });
+  }
+};
