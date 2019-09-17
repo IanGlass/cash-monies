@@ -2,12 +2,8 @@
 
 exports[`should render LoginPage 1`] = `
 <div>
-  <form
-    onSubmit={[Function]}
-  >
-    <button>
-      Login
-    </button>
-  </form>
+  <button>
+    Login
+  </button>
 </div>
 `;
