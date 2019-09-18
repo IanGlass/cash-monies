@@ -4,9 +4,14 @@
   border: none;
   border-radius: 3px;
   color: white;
+  display: inline-block;
   font-size: $font-size-large;
   font-weight: 300;
-  height: 5rem;
   padding: $s-size;
-  width: 80%;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.button--link {
+  background: none;
 }
