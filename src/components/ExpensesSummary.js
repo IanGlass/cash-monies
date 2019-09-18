@@ -6,8 +6,10 @@ import expensesTotal from '../selectors/expenses-total';
 import getVisibleExpenses from '../selectors/expenses';
 
 export const ExpensesSummary = (props) => (
-  <div>
-    <p>Viewing {props.expensesCount} {props.expensesCount === 1 ? 'expense' : 'expenses'} with total {numeral(props.expensesTotal / 100).format('$0,0.00')}</p>
+  <div className="page-header">
+    <div className="content-container">
+      <h1 className="page-header__title">Viewing <span>{props.expensesCount}</span> {props.expensesCount === 1 ? 'expense' : 'expenses'} with total <span>{numeral(props.expensesTotal / 100).format('$0,0.00')}</span></h1>
+    </div>
   </div>
 );
 
