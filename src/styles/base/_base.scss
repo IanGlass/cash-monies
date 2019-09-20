@@ -1,3 +1,8 @@
+// Prevent adding padding and margin to element heights
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
