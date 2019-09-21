@@ -4,5 +4,7 @@
   ],
   "setupFiles": [
     "<rootDir>/src/tests/setupTests.js"
-  ]
+  ],
+  "collectCoverage": true,
+  "collectCoverageFrom": ["src/**/*.{js,jsx}"]
 }

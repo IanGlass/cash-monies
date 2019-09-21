@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Ian Glass",
-  "license": "MIT",
+  "license": "Apache",
   "scripts": {
     "build:dev": "webpack --env development",
     "build:prod": "webpack -p --env production",
     "dev": "webpack-dev-server",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
+    "testCI": "cross-env NODE_ENV=test jest --config=jest.config.json && codecov -t 7803a87d-695d-45d9-93a5-4d126262193b",
     "start": "node server/server.js",
     "heroku-postbuild": "npm run build:prod"
   },
