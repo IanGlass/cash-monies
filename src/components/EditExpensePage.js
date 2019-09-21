@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Modal from 'react-modal';
+import ConfirmationModal from './ConfirmationModal';
 
 import ExpenseForm from './ExpenseForm';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
@@ -48,19 +48,11 @@ export class EditExpensePage extends React.Component {
           <button className="button button--secondary"
             onClick={this.openModal}
           >Remove Expense</button>
-          <Modal
-            isOpen={this.state.showModal}
-            onRequestClose={this.closeModal}
-            ariaHideApp={false}
-            className="modal"
-            contentLabel="Confirm Remove Expense"
-          >
-            <p>Are you sure?</p>
-            <div className="button--group">
-              <button className="button" onClick={this.removeExpense}>Yes</button>
-              <button className="button" onClick={this.closeModal}>No</button>
-            </div>
-          </Modal>
+          <ConfirmationModal
+            showModal={this.state.showModal}
+            closeModal={this.closeModal}
+            confirmAction={this.removeExpense}
+          />
         </div>
       </div>
     );
