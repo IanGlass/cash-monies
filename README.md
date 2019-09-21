@@ -1,1 +1,3 @@
+[![CircleCI](https://circleci.com/gh/IanGlass/cash-monies/tree/master.svg?style=svg)](https://circleci.com/gh/IanGlass/cash-monies/tree/master) [![codecov](https://codecov.io/gh/IanGlass/cash-monies/branch/master/graph/badge.svg)](https://codecov.io/gh/IanGlass/cash-monies) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 # cash-monies
