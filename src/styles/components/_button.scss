@@ -19,3 +19,9 @@
 .button--secondary {
   background: #888888;
 }
+
+.button--group {
+  width: 20vw;
+  display: flex;
+  justify-content: space-between;
+}
