@@ -8,7 +8,7 @@ https://cash-monies.herokuapp.com/
 ## Login
 Logging in can currently only be achieved using Google OAuth, which will automatically fetch expense data related to your Google profile.
 <p align="center">
-<img scr="./github_images/login-page.png" width="500">
+<img src="./github_images/login-page.png" width="500">
 </p>
 
 <details>
@@ -46,8 +46,8 @@ export const startLogin = () => {
 ## Dashboard
 
 <p align="center">
-<img src="./github_images/dashboard.png" width="500">
-<img src="./github_images/dashboard-filtered.png" width="500">
+<img src="./github_images/dashboard.png" width="400">
+<img src="./github_images/dashboard-filtered.png" width="400">
 </p>
 
 <details>
@@ -323,7 +323,7 @@ export default ExpenseListItem;
 
 ## Add Expense
 <p align="center">
-<img scr="./github_images/add-expense.png" width="500">
+<img src="./github_images/add-expense.png" width="500">
 </p>
 
 <details>
@@ -489,7 +489,7 @@ export default class ExpenseForm extends React.Component {
 
 ## Edit Expense
 <p align="center">
-<img scr="./github_images/edit-expense.png" width="500">
+<img src="./github_images/edit-expense.png" width="500">
 </p>
 
 <details>
