@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ConfirmationModal from './ConfirmationModal';
+import Dialog from '@material-ui/core/Dialog';
 
 import ExpenseForm from './ExpenseForm';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';

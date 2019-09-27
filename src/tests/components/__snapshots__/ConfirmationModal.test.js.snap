@@ -8,10 +8,13 @@ exports[`should render ConfirmationModal 1`] = `
   closeTimeoutMS={0}
   contentLabel="Confirm Action"
   isOpen={false}
-  onRequestClose={[Function]}
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
+  role="dialog"
+  shouldCloseOnEsc={true}
   shouldCloseOnOverlayClick={true}
+  shouldFocusAfterRender={true}
+  shouldReturnFocusAfterClose={true}
 >
   <p>
     Are you sure?
