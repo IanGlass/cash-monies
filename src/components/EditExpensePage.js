@@ -52,6 +52,9 @@ export class EditExpensePage extends React.Component {
           <ConfirmationModal
             showModal={this.state.showModal}
             closeModal={this.closeModal}
+            closeLabel="No"
+            confirmLabel="Yes"
+            message={"Are you sure you want to remove " + this.props.expense.description + "?"}
             confirmAction={this.removeExpense}
           />
         </div>

@@ -37,8 +37,11 @@ exports[`should handle startEditExpense 1`] = `
       Remove Expense
     </button>
     <ConfirmationModal
+      closeLabel="No"
       closeModal={[Function]}
       confirmAction={[Function]}
+      confirmLabel="Yes"
+      message="Are you sure you want to remove Rent?"
       showModal={false}
     />
   </div>
@@ -82,8 +85,11 @@ exports[`should render EditExpensePage correctly 1`] = `
       Remove Expense
     </button>
     <ConfirmationModal
+      closeLabel="No"
       closeModal={[Function]}
       confirmAction={[Function]}
+      confirmLabel="Yes"
+      message="Are you sure you want to remove Rent?"
       showModal={false}
     />
   </div>

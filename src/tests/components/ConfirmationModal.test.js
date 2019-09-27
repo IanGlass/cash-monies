@@ -14,13 +14,3 @@ beforeEach(() => {
 test('should render ConfirmationModal', () => {
   expect(wrapper).toMatchSnapshot();
 });
-
-test('should execute confirmAction in ConfirmationModal', () => {
-  wrapper.find('button').first().simulate('click');
-  expect(confirmAction).toHaveBeenCalled();
-});
-
-test('should close ConfirmationModal', () => {
-  wrapper.find('button').last().simulate('click');
-  expect(closeModal).toHaveBeenCalled();
-});

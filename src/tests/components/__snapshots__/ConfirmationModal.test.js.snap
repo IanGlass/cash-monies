@@ -1,39 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ConfirmationModal 1`] = `
-<Modal
-  ariaHideApp={false}
-  bodyOpenClassName="ReactModal__Body--open"
-  className="modal"
-  closeTimeoutMS={0}
-  contentLabel="Confirm Action"
-  isOpen={false}
-  parentSelector={[Function]}
-  portalClassName="ReactModalPortal"
-  role="dialog"
-  shouldCloseOnEsc={true}
-  shouldCloseOnOverlayClick={true}
-  shouldFocusAfterRender={true}
-  shouldReturnFocusAfterClose={true}
->
-  <p>
-    Are you sure?
-  </p>
-  <div
-    className="button--group"
+<div>
+  <WithStyles(ForwardRef(Dialog))
+    TransitionComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
+    aria-describedby="alert-dialog-slide-description"
+    aria-labelledby="alert-dialog-slide-title"
+    keepMounted={true}
+    onClose={[Function]}
   >
-    <button
-      className="button"
-      onClick={[Function]}
-    >
-      Yes
-    </button>
-    <button
-      className="button"
-      onClick={[Function]}
-    >
-      No
-    </button>
-  </div>
-</Modal>
+    <WithStyles(ForwardRef(DialogTitle))
+      id="alert-dialog-slide-title"
+    />
+    <WithStyles(ForwardRef(DialogActions))>
+      <WithStyles(ForwardRef(Button))
+        color="primary"
+        onClick={[Function]}
+      />
+      <WithStyles(ForwardRef(Button))
+        color="primary"
+        onClick={[Function]}
+      />
+    </WithStyles(ForwardRef(DialogActions))>
+  </WithStyles(ForwardRef(Dialog))>
+</div>
 `;
