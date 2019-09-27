@@ -7,11 +7,11 @@
   flex-direction: row;
   margin-bottom: $l-size;    
   }
-}
 
-.input-group__item {
-  margin-bottom: $s-size;
-  @media (min-width: $desktop-breakpoint) {
-    margin: 0 $s-size 0 0;
+  &__item {
+    margin-bottom: $s-size;
+    @media (min-width: $desktop-breakpoint) {
+      margin: 0 $s-size 0 0;
+    }
   }
 }

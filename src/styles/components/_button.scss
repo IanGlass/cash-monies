@@ -10,18 +10,18 @@
   padding: $s-size;
   text-decoration: none;
   line-height: 1;
-}
 
-.button--link {
-  background: none;
-}
+  &--link {
+    background: none;
+  }
 
-.button--secondary {
-  background: #888888;
-}
+  &--secondary {
+    background: #888888;
+  }
 
-.button--group {
-  width: 20vw;
-  display: flex;
-  justify-content: space-between;
+  &--group {
+    width: 20vw;
+    display: flex;
+    justify-content: space-between;
+  }
 }
