@@ -105,6 +105,16 @@ exports[`should render ExpenseForm correctly 1`] = `
       Save Expense
     </button>
   </div>
+  <ErrorSnackbar
+    anchorOrigin={
+      Object {
+        "horizontal": "center",
+        "vertical": "bottom",
+      }
+    }
+    message=""
+    open={false}
+  />
 </form>
 `;
 
@@ -213,6 +223,16 @@ exports[`should render ExpenseForm correctly with expense data 1`] = `
       Save Expense
     </button>
   </div>
+  <ErrorSnackbar
+    anchorOrigin={
+      Object {
+        "horizontal": "center",
+        "vertical": "bottom",
+      }
+    }
+    message=""
+    open={false}
+  />
 </form>
 `;
 
@@ -321,6 +341,16 @@ exports[`should render error for invalid form submission 1`] = `
       Save Expense
     </button>
   </div>
+  <ErrorSnackbar
+    anchorOrigin={
+      Object {
+        "horizontal": "center",
+        "vertical": "bottom",
+      }
+    }
+    message=""
+    open={false}
+  />
 </form>
 `;
 
@@ -434,5 +464,15 @@ exports[`should render error for invalid form submission 2`] = `
       Save Expense
     </button>
   </div>
+  <ErrorSnackbar
+    anchorOrigin={
+      Object {
+        "horizontal": "center",
+        "vertical": "bottom",
+      }
+    }
+    message="Please provide description and amount."
+    open={true}
+  />
 </form>
 `;

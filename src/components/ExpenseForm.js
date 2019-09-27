@@ -2,6 +2,8 @@ import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 
+import ErrorSnackbar from './ErrorSnackbar';
+
 export default class ExpenseForm extends React.Component {
   constructor(props) {
     super(props);
@@ -56,7 +58,6 @@ export default class ExpenseForm extends React.Component {
   render() {
     return (
       <form className="form" onSubmit={this.onSubmit}>
-        {this.state.error && <p className="form__error">{this.state.error}</p>}
         <input
           type="text"
           placeholder="Description"
@@ -90,6 +91,11 @@ export default class ExpenseForm extends React.Component {
         <div>
           <button className="button">Save Expense</button>
         </div>
+        <ErrorSnackbar
+          open={!!this.state.error}
+          message={this.state.error}
+          anchorOrigin={{vertical: "bottom", horizontal: "center"}}
+        />
       </form>
     )
   }
