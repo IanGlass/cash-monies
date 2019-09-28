@@ -3,6 +3,10 @@
 # cash-monies
 cash-monies is a budgetting app that allows you to store and manage a persistent list of expenses including a title, the amount, the date and an optional note.
 
+<p align="center">
+https://cash-monies.herokuapp.com/
+</p>
+
 ## Login
 Logging in can currently only be achieved using Google OAuth, which will automatically fetch expense data related to your Google profile.
 <p align="center">
