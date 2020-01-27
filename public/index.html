@@ -7,11 +7,28 @@
   <title>Cash Monies</title>
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link rel="stylesheet" type="text/css" href="/dist/styles.css" />
+  <link rel="manifest" href="/manifest.json" />
 </head>
 
 <body>
   <div id="app"></div>
   <script src="/dist/bundle.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('worker.js').then(function(registration) {
+          console.log('Worker registration successful', registration.scope);
+        }, function(err) {
+          console.log('Worker registration failed', err);
+        }).catch(function(err) {
+          console.log(err);
+        });
+      });
+    } else {
+      console.log('Service Worker is not supported by browser.');
+    }
+  </script>
 </body>
 
 </html>
